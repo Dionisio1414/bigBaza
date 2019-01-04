@@ -1,6 +1,7 @@
 @import "vars"
 @import "fonts"
 @import "libs"
+@import "mixins/card-product"
 
 ::placeholder
 	color: rgba(69, 57, 57, 0.5)
@@ -203,6 +204,7 @@ b, strong
 
 .home-slider
 	padding-bottom: 62px
+	margin-bottom: 71px!important
 	.slick-dots
 		bottom: 44px
 		li 
@@ -258,4 +260,236 @@ b, strong
 
 /* END HOME SLIDER */
 
+
+/* PRODUCT TABS SECTION */
+
+.product
+	.tabs
+		display: flex
+		border: 1px solid #969696
+		border-radius: 2px
+		margin-bottom: 30px
+		a
+			font-family: "SegoeBold", sans-serif
+			font-size: 16px
+			color: #000
+			letter-spacing: 1px
+			margin-right: 8px
+			padding: 9px 40px
+			&:last-child
+				margin-right: 0
+			&.active
+				background-color: $accent
+				color: #fff
+	&__slider	
+		margin: 0 210px
+		.card-item	
+			+product-card
+	.arrows
+		padding: 0
+		margin: 0
+		list-style-type: none
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		li
+			display: inline-block
+			border: 2px solid #E2E2E2
+			border-radius: 2px
+			padding: 10px 12px 10px 15px
+			transition: all .35s ease-in-out
+			img
+				width: 20px
+			&.prev
+				margin-right: 15px
+				img
+					transform: rotateY(-180deg)
+			&:hover
+				border-color: $accent
+
+/* END PRODUCT TABS SECTION */
+
+
+/* Partners section */
+
+.partners
+	margin: 0 210px
+	margin-top: 65px
+	margin-bottom: 72px
+	&__container
+		background-color: #ECECEC
+		padding: 28px 0 42px 31px
+		height: 210px
+		.num-container
+			font-family: "SegoeBlack", sans-serif
+			font-size: 18px
+			margin-bottom: 10px
+			color: $accent
+		.description
+			font-family: "SegoeBlack", sans-serif
+			font-size: 16px
+			text-transform: uppercase
+			width: 150px
+			letter-spacing: 1px
+			margin-bottom: 24px
+			color: #000
+		.logo
+			width: 164px
+			a
+				display: inline-block
+
+/* End partners section */
+
+
+/* Plumbing section */
+
+.br
+	border-right: 1px solid #ECECEC
+.bb
+	border-bottom: 1px solid #ECECEC
+
+.plumbing
+	margin: 0 210px
+	margin-bottom: 70px
+	.caption-row
+		border: 1px solid #ECECEC
+		border-radius: 2px
+		.wrapper-caption
+			background-color: $accent
+			border-radius: 2px
+			width: 51%
+			padding: 10px 25px
+			span
+				font-family: "SegoeBold", sans-serif 
+				font-size: 16px
+				letter-spacing: 1px
+				color: #fff
+		.arrows-navigation
+			padding: 0
+			margin: 0
+			list-style-type: none
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: flex-end
+			li
+				display: inline-block
+				border: 1px solid #E2E2E2
+				border-top: none
+				border-bottom: none
+				border-radius: 2px
+				padding: 10px 12px 10px 15px
+				transition: all .35s ease-in-out
+				img
+					width: 20px
+				&.prev
+					margin-right: 15px
+					img
+						transform: rotateY(-180deg)
+				&.next
+					border-right: none
+	&__slider
+		border-left: 1px solid #E2E2E2
+		border-right: 1px solid #E2E2E2
+		border-bottom: 1px solid #E2E2E2
+		.plumbing-slide
+			width: 100%
+			position: relative
+			height: 200px
+			.caption
+				font-family: "SegoeSemiBold", sans-serif
+				font-size: 16px
+				color: #000
+				width: 130px
+				line-height: 18px
+				margin-top: 20px
+				a
+					color: #000
+			.container-image
+				position: absolute
+				bottom: 25px
+				right: 0
+				width: 160px
+
+/* End plumbing section */
+
+
+/* Specification */
+
+.specification
+	background-color: #ECECEC
+	margin-bottom: 20px
+	padding: 70px 0
+	.wrapper
+		margin: 0 210px
+		h1
+			font-family: "SegoeBold", sans-serif
+			font-size: 16px
+			color: #000
+			text-transform: uppercase
+			letter-spacing: 1px
+			margin-bottom: 24px
+		ul
+			padding: 0
+			margin: 0
+			margin-left: 18px
+			li
+				font-size: 14px
+				margin-bottom: 10px
+		button.more
+			background-color: transparent
+			font-family: "SegoeBold", sans-serif
+			font-size: 12px
+			text-transform: uppercase
+			border: 2px solid #ff161f
+			color: #000
+			text-decoration: none
+			padding: 10px 60px
+			margin-top: 15px
+			transition: all .4s ease
+			&:hover
+				background-color: $accent
+				color: #fff
+
+/* End specification */
+
+/* FOOTER */
+
+.footer
+	&__top
+		border-top: 2px solid #E2E2E2
+		border-bottom: 2px solid #E2E2E2
+		.ft-slider
+			margin: 0 230px
+			.slick-slide
+				border-right: 2px solid #E2E2E2
+				&:last-child
+					border-right: none
+			.item
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 20px 0
+				img
+					width: 52px
+					height: 58px
+				p
+					font-family: "SegoeSemiBold", sans-serif
+					font-size: 14px
+					margin-left: 10px
+					width: 125px
+					line-height: 17px
+					color: #000
+	
+
+/* END FOOTER */
 @import "media" // Always at the end
