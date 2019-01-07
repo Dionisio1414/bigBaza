@@ -460,10 +460,21 @@ b, strong
 
 /* FOOTER */
 
+.footer-border-right
+	&::after
+		content: ""
+		position: absolute
+		top: 24px
+		right: 0
+		height: 83%
+		border-right: 2px solid #E2E2E2
+
+
 .footer
 	&__top
 		border-top: 2px solid #E2E2E2
 		border-bottom: 2px solid #E2E2E2
+		margin-bottom: 20px
 		.ft-slider
 			margin: 0 230px
 			.slick-slide
@@ -488,8 +499,82 @@ b, strong
 					margin-left: 10px
 					width: 125px
 					line-height: 17px
+					margin-bottom: 0
 					color: #000
+	&__bottom
+		background-color: #333
+		padding: 60px 180px 25px 180px
+		h4
+			font-family: "SegoeBold", sans-serif
+			font-size: 16px
+			color: #fff
+			letter-spacing: 1px
+			margin-bottom: 40px
+		ul
+			list-style-type: none
+			padding: 0
+			margin: 0
+			li
+				font-family: "SegoeSemiBold", sans-serif
+				font-size: 14px
+				display: block
+				color: #fff
+				letter-spacing: 1px
+				margin-bottom: 10px
+				img
+					width: 20px
+					vertical-align: text-bottom
+					margin-right: 10px
+				a
+					color: #fff
+		.contacts
+			li
+				a
+					display: block
+					text-decoration: none
+					width: 187px
+					text-align: right
+					color: #fff
+				&:last-child
+					line-height: 20px
+		.menu
+			margin-left: 80px
+			li
+				margin-bottom: 5px
+				a
+					font-family: "SegoeRegular", sans-serif
+					&:hover
+						text-decoration: underline
+		form
+			position: relative
+			input
+				background-color: transparent
+				font-family: "SegoeRegular", sans-serif
+				font-size: 14px
+				letter-spacing: 0px
+				border-radius: 2px
+				border: 1px solid #fff
+				padding: 10px 15px
+				color: #fff
+				width: 100%
+				&::placeholder
+					font-family: "SegoeRegular", sans-serif
+					font-size: 14px
+					color: #fff
+			button
+				position: absolute
+				top: 0
+				right: 0
+				background-color: transparent
+				border: 2px solid $accent
+				outline: none
+				padding: 8px 10px
+				img
+					width: 20px
+		.copyright-container
+			border-top: 2px solid #fff
+			margin-top: 25px
+				
 	
-
 /* END FOOTER */
 @import "media" // Always at the end
