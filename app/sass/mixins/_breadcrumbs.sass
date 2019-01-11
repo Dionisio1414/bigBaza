@@ -1,0 +1,16 @@
+@mixin breadcrumbs
+	height: 95px
+	padding: 0px 200px
+	ol.breadcrumb
+		background-color: transparent
+		align-items: flex-start
+		padding: 0
+		margin-bottom: 0
+		.breadcrumb-item
+			a
+				font-family: "SegoeSemiBold", sans-serif
+				font-size: 12px
+				letter-spacing: .5px
+				color: #282828
+			&::before
+				content: ""
