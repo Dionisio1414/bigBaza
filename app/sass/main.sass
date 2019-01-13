@@ -3,6 +3,7 @@
 @import "libs"
 @import "mixins/card-product"
 @import "mixins/breadcrumbs"
+@import "mixins/plumbing"
 
 ::placeholder
 	color: rgba(69, 57, 57, 0.5)
@@ -221,6 +222,8 @@ b, strong
 					.tel
 						display: block
 						letter-spacing: 1px
+				.catalog
+					margin: 0
 				.contacts
 					line-height: 18px
 					border: none
@@ -493,55 +496,7 @@ b, strong
 						transform: rotateY(-180deg)
 				&.next
 					border-right: none
-	&__slider
-		border-left: 1px solid #E2E2E2
-		border-right: 1px solid #E2E2E2
-		border-bottom: 1px solid #E2E2E2
-		.plumbing-slide
-			width: 100%
-			position: relative
-			height: 200px
-			.caption
-				font-family: "SegoeSemiBold", sans-serif
-				font-size: 16px
-				color: #000
-				width: 130px
-				line-height: 18px
-				margin-top: 20px
-				a
-					color: #000
-			.container-image
-				position: absolute
-				bottom: 25px
-				right: 0
-				width: 160px
-			.more
-				opacity: 0
-				position: absolute
-				top: 77%
-				left: 0
-				display: inline-block
-				font-family: "SegoeBold", sans-serif
-				font-size: 12px
-				color: #131313
-				letter-spacing: 1px
-				text-transform: uppercase
-				&::before
-					content: ""
-					position: absolute
-					bottom: -5px
-					left: 0
-					height: 2px
-					width: 0
-					background-color: $accent
-					transition: all .75s ease
-				&:hover::before
-					width: 100%	
-				img
-					display: inline-block
-					width: 11px
-					margin-left: 5px
-
+	+plumbing-slide
 /* End plumbing section */
 
 
@@ -606,8 +561,28 @@ nav.breadcrumb
 /*
 
 
-
-
+.catalog
+	margin: 0 210px
+	+plumbing-slide
+	.catalog-arrows
+		padding: 0
+		margin: 0
+		list-style-type: none
+		display: flex
+		justify-content: center
+		margin: 20px 0 60px 0
+		li
+			display: inline-block
+			border: 1px solid #E2E2E2
+			border-radius: 2px
+			padding: 10px 12px 10px 15px
+			transition: all .35s ease-in-out
+			img
+				width: 20px
+			&.prev
+				margin-right: 10px
+				img
+					transform: rotateY(-180deg)
 
 /*
 /*

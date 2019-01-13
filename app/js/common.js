@@ -2,13 +2,13 @@ $(function() {
 	$('.home-slider').slick({
 		dots: true
 	});
-	$('.product__slider').slick({
+	$('.product__slider.active').slick({
 		prevArrow: $('.product .arrows li.prev'),
 		nextArrow: $('.product .arrows li.next')
 	});
-	$('.plumbing__slider').slick({
-		prevArrow: $('.plumbing .caption-row .arrows-navigation li.prev'),
-		nextArrow: $('.plumbing .caption-row .arrows-navigation li.next')
+	$('.plumbing__slider, .catalog__slider').slick({
+		prevArrow: $('.plumbing .caption-row .arrows-navigation li.prev, .catalog-arrows li.prev'),
+		nextArrow: $('.plumbing .caption-row .arrows-navigation li.next, .catalog-arrows li.next')
 	});
 	$('.ft-slider').slick({
 		slidesToShow: 5
@@ -25,7 +25,7 @@ $(function() {
 		$(this).addClass('active').siblings().removeClass('active');
 		$sliders.removeClass('active').eq($(this).index()).addClass('active');
 		$('.product__slider').slick('setPosition');
-		
+		$('.product__slider').slick();
 	});
 	
 	// counter for products
@@ -71,7 +71,7 @@ $(function() {
 	
 	// hover plumbing
 	
-	var $plumbingContainer = $('.plumbing__slider .plumbing-slide'),
+	var $plumbingContainer = $('.plumbing__slider .plumbing-slide, .catalog__slider .plumbing-slide'),
 		$plumbingBtn = $plumbingContainer.find('.more');
 	
 	$plumbingContainer.hover(function() {
