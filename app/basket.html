@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>Catalog</title>
+	<title>Basket</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -345,575 +345,192 @@
 				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#">Каталог
-					<img src="img/icons/breadcrumb-arrow.svg" class="breadcrumb-arrow" alt="">
-				</a>
-			</li>
-			<li class="breadcrumb-item active" aria-current="page">
-				<a href="#">Сантехника</a>
+				<a href="#">Корзина</a>
 			</li>
 	 	</ol>
 	 	<h3 class="breadcrumb-caption">
-	 		Сантехника
+	 		Корзина
 	 	</h3>
 	</nav>
 	<!-- End breadcrumbs -->
 	
-	<!-- Catalog section -->
 	
-	<section class="catalog">
-		<div class="catalog__slider">
-			<div>
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-3 br bb">
-							<div class="plumbing-slide">
-								<div class="caption">
-									<a href="#">Канализация и фитинги</a>
-								</div>
-								<div class="container-image">
-									<img src="img/plumbing/1.jpg" class="img-responsive" alt="">
-								</div>
-								<a href="#" class="more">Подробнее
-									<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="col-3 br bb">
-							<div class="plumbing-slide">
-								<div class="caption">
-									<a href="#">Смесители</a>
-								</div>
-								<div class="container-image">
-									<img src="img/plumbing/2.jpg" class="img-responsive" alt="">
-								</div>
-								<a href="#" class="more">Подробнее
-									<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="col-3 br bb">							
-							<div class="plumbing-slide">
-								<div class="caption">
-									<a href="#">Водонагреватели</a>
-								</div>
-								<div class="container-image">
-									<img src="img/plumbing/3.jpg" class="img-responsive" alt="">
-								</div>
-								<a href="#" class="more">Подробнее
-									<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="col-3 bb">
-							<div class="plumbing-slide">
-								<div class="caption">
-									<a href="#">Ванны</a>
-								</div>
-								<div class="container-image">
-									<img src="img/plumbing/4.png" class="img-responsive" alt="">
-								</div>
-								<a href="#" class="more">Подробнее
-									<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-3 br bb">							
-							<div class="plumbing-slide">
-								<div class="caption">
-									<a href="#">Компакты</a>
-								</div>
-								<div class="container-image">
-									<img src="img/plumbing/5.jpg" class="img-responsive" alt="">
-								</div>
-								<a href="#" class="more">Подробнее
-									<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="col-3 br bb">							
-							<div class="plumbing-slide">
-								<div class="caption">
-									<a href="#">Умывальники</a>
-								</div>
-								<div class="container-image">
-									<img src="img/plumbing/6.jpg" class="img-responsive" alt="">
-								</div>
-								<a href="#" class="more">Подробнее
-									<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="col-3 br bb">							
-							<div class="plumbing-slide">
-								<div class="caption">
-									<a href="#">Гидробоксы</a>
-								</div>
-								<div class="container-image">
-									<img src="img/plumbing/7.jpeg" class="img-responsive" alt="">
-								</div>
-								<a href="#" class="more">Подробнее
-									<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="col-3 bb">
-							<div class="plumbing-slide">
-								<div class="caption">
-									<a href="#">Душевые кабины</a>
-								</div>
-								<div class="container-image">
-									<img src="img/plumbing/8.jpg" class="img-responsive" alt="">
-								</div>
-								<a href="#" class="more">Подробнее
-									<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-								</a>
-							</div>
-						</div>
+	<section class="pannier">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<table class="table table-bordered">
+					  <thead>
+						<tr>
+						  <th scope="col" class="image">Изображение</th>
+						  <th scope="col" class="name">Название</th>
+						  <th scope="col" class="count">Количество</th>
+						  <th scope="col" class="price">Цена</th>
+						  <th scope="col" class="general-price">Общая стоимость</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <td class="image">
+							<img src="img/photo-basket.png" alt="">	
+						  </td>
+						  <td class="desc">
+						  	<p>
+						  		Клей для облицовки балконов 
+								и полов с подогревом 
+								Полимин П-24 (25кг)
+						  	</p>
+						  </td>
+						  <td class="count">
+						  	<div class="adding-counter">
+						  		<span class="minus">-</span>
+						  		<input type="text" name="count" value="1">
+						  		<span class="plus">+</span>
+						  	</div>
+						  	<div class="delete-card">
+						  		<img src="img/icons/cancel.svg" alt="">
+						  	</div>
+						  </td>
+						  <td class="price">
+						  	259.00 грн
+						  </td>
+						  <td class="general-price">
+						  	259.00 грн
+						  </td>
+						</tr>						
+					  	<tr>
+						 <td class="image">
+							<img src="img/photo-basket.png" alt="">	
+						  </td>
+						  <td class="desc">
+						  	<p>
+						  		Клей для облицовки балконов 
+								и полов с подогревом 
+								Полимин П-24 (25кг)
+						  	</p>
+						  </td>
+						 <td class="count">
+						  	<div class="adding-counter">
+						  		<span class="minus">-</span>
+						  		<input type="text" name="count" value="1">
+						  		<span class="plus">+</span>
+						  	</div>
+						  	<div class="delete-card">
+						  		<img src="img/icons/cancel.svg" alt="">
+						  	</div>
+						  </td>
+						  <td class="price">
+						  	259.00 грн
+						  </td>
+						  <td class="general-price">
+						  	259.00 грн
+						  </td>
+						</tr>
+					  	<tr>
+						  <td class="image">
+							<img src="img/photo-basket.png" alt="">	
+						  </td>
+						  <td class="desc">
+						  	<p>
+						  		Клей для облицовки балконов 
+								и полов с подогревом 
+								Полимин П-24 (25кг)
+						  	</p>
+						  </td>
+						  <td class="count">
+						  	<div class="adding-counter">
+						  		<span class="minus">-</span>
+						  		<input type="text" name="count" value="1">
+						  		<span class="plus">+</span>
+						  	</div>
+						  	<div class="delete-card">
+						  		<img src="img/icons/cancel.svg" alt="">
+						  	</div>
+						  </td>
+						  <td class="price">
+						  	259.00 грн
+						  </td>
+						  <td class="general-price">
+						  	259.00 грн
+						  </td>
+						</tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<h4 class="chance-caption">Воспользуйтесь дополнительными возможностями</h4>
+					<p class="chance-description">Если у вас есть код купона на скидку или бонусные баллы, которые вы хотите использовать, выберите соответствующий пункт. Также, можно (приблизительно) узнать стоимость доставки в ваш регион.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="chance-accordion coupon">
+						<span>Использовать купон на скидку
+							<img src="img/icons/arrow-down.svg" alt="">
+						</span>
 					</div>	
-				</div>
-			</div>
-			<div>
-				2
-			</div>
-		</div>
-		<ul class="catalog-arrows">
-			<li class="prev">
-				<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-			</li>
-			<li class="next">
-				<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-			</li>
-		</ul>
-		
-		<!-- Sort products -->
-		<div class="sort-container">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-4">
-						<div class="filter-btn">
-							фильтр
-							<img src="img/icons/right-arrow.svg" alt="">
-						</div>
-					</div>
-					<div class="col-4 d-flex justify-content-center align-items-center">
-						<span class="list-type">
-							<img src="img/icons/list-black.svg" alt="">
-						</span>
-						<span class="grid-type active">
-							<img src="img/icons/menu-black.svg" alt="">
+					<form class="accordion-form coupon">
+						<label for="chanceFirst">
+							<span>*</span>Код купона:
+						</label>
+						<input type="text" id="chanceFirst">
+						<button>Применить</button>
+					</form>				
+					<div class="chance-accordion sertificat">
+						<span>Использовать подарочный сертификат  
+							<img src="img/icons/arrow-down.svg" alt="">
 						</span>
 					</div>
-					<div class="col-4 d-flex justify-content-end align-items-center">
-						<p class="caption-sort">Сортировать:</p>
-						<div class="order-select">По умолчанию
-							<img src="img/icons/right-arrow.svg" alt="">
-							<ul class="order-dropdown">
-								<li><a href="#">по популярности</a></li>
-								<li><a href="#">по рейтингу</a></li>
-								<li><a href="#">по дате<br>(от дешевых к дорогим)</a></li>
-								<li><a href="#">по цене<br>(от дешевых к дорогим)</a></li>
-							</ul>
-						</div>
-						<div class="digit-select">12
-							<img src="img/icons/right-arrow.svg" alt="">
-							<ul class="digit-dropdown">
-								<li><a href="#">8</a></li>
-								<li><a href="#">12</a></li>
-								<li><a href="#">16</a></li>
-								<li><a href="#">20</a></li>
-								<li><a href="#">24</a></li>
-							</ul>
-						</div>
-					</div>
+					<form class="accordion-form sertificat">
+						<label for="chanceSecond">
+							<span>*</span>Код сертификата:
+						</label>
+						<input type="text" id="chanceSecond">
+						<button>Применить</button>
+					</form>
 				</div>
 			</div>
-		</div>
-		<!-- End sort products -->
-		
-		<div class="sort-products">
-			<div class="container-fluid p-0">
-					<div class="row">
-						<div class="col-3">
-							<!-- Product card -->
-							<div class="card-item">
-								<div class="image">
-									<a href="#">
-										<img src="img/product-card-items/1.jpg" alt="">
-									</a>
-								</div>
-								<div class="description">
-									<a href="#">
-										Клей для облицовки балконов и полов с подогревом Полимин П-24 (25кг)
-									</a>
-								</div>									
-								<div class="share">
-									40%
-								</div>
-								<div class="bottom-part">
-									<div class="price">
-										<span class="old-price">
-											279.00 грн
-										</span>
-										<span class="new-price">
-											259.00 грн
-										</span>
-									</div>
-									<div class="wholesale">
-										<span>
-											Оптовая цена: 232 грн.
-										</span>
-									</div>
-									<div class="add-to-card">
-										<span class="minus">-</span>
-										<input type="text" name="count" value="1">
-										<span class="plus">+</span>
-									</div>
-									<div class="button-container">
-										<button class="buy">Купить</button>
-									</div>
-								</div>
+			<div class="row">
+				<div class="col">
+					<div class="prices-container">
+						<div class="row">
+							<div class="col-7">
+								<span class="price-text">
+									Цена
+								</span>
 							</div>
-							<!-- End product card -->
-						</div>
-						<div class="col-3">
-							<!-- Product card -->
-							<div class="card-item">
-								<div class="image">
-									<a href="#">
-										<img src="img/product-card-items/2.jpg" alt="">
-									</a>
-								</div>
-								<div class="description">
-									<a href="#">
-										Клей для облицовки балконов и полов с подогревом Полимин П-24 (25кг)
-									</a>
-								</div>									
-								<div class="share">
-									40%
-								</div>
-								<div class="bottom-part">
-									<div class="price">
-										<span class="old-price">
-											279.00 грн
-										</span>
-										<span class="new-price">
-											259.00 грн
-										</span>
-									</div>
-									<div class="wholesale">
-										<span>
-											Оптовая цена: 232 грн.
-										</span>
-									</div>
-									<div class="add-to-card">
-										<span class="minus">-</span>
-										<input type="text" name="count" value="1">
-										<span class="plus">+</span>
-									</div>
-									<div class="button-container">
-										<button class="buy">Купить</button>
-									</div>
-								</div>
+							<div class="col-5">
+								<span class="price">
+									259.00 грн
+								</span>
 							</div>
-							<!-- End product card -->
-						</div>
-						<div class="col-3">
-							<!-- Product card -->
-							<div class="card-item">
-								<div class="image">
-									<a href="#">
-										<img src="img/product-card-items/3.jpg" alt="">
-									</a>
-								</div>
-								<div class="description">
-									<a href="#">
-										Клей для облицовки балконов и полов с подогревом Полимин П-24 (25кг)
-									</a>
-								</div>									
-								<div class="share">
-									40%
-								</div>
-								<div class="bottom-part">
-									<div class="price">
-										<span class="old-price">
-											279.00 грн
-										</span>
-										<span class="new-price">
-											259.00 грн
-										</span>
-									</div>
-									<div class="wholesale">
-										<span>
-											Оптовая цена: 232 грн.
-										</span>
-									</div>
-									<div class="add-to-card">
-										<span class="minus">-</span>
-										<input type="text" name="count" value="1">
-										<span class="plus">+</span>
-									</div>
-									<div class="button-container">
-										<button class="buy">Купить</button>
-									</div>
-								</div>
-							</div>
-							<!-- End product card -->
 						</div>						
-						<div class="col-3">
-							<!-- Product card -->
-							<div class="card-item">
-								<div class="image">
-									<a href="#">
-										<img src="img/product-card-items/4.jpg" alt="">
-									</a>
-								</div>
-								<div class="description">
-									<a href="#">
-										Клей для облицовки балконов и полов с подогревом Полимин П-24 (25кг)
-									</a>
-								</div>									
-								<div class="share">
-									40%
-								</div>
-								<div class="bottom-part">
-									<div class="price">
-										<span class="old-price">
-											279.00 грн
-										</span>
-										<span class="new-price">
-											259.00 грн
-										</span>
-									</div>
-									<div class="wholesale">
-										<span>
-											Оптовая цена: 232 грн.
-										</span>
-									</div>
-									<div class="add-to-card">
-										<span class="minus">-</span>
-										<input type="text" name="count" value="1">
-										<span class="plus">+</span>
-									</div>
-									<div class="button-container">
-										<button class="buy">Купить</button>
-									</div>
-								</div>
+						<div class="row">
+							<div class="col-7">
+								<span class="price-text all">
+									Всего
+								</span>
 							</div>
-							<!-- End product card -->
+							<div class="col-5">
+								<span class="price">
+									259.00 грн
+								</span>
+							</div>
 						</div>
-					</div>		
-					<div class="row">
-						<div class="col-3">
-							<!-- Product card -->
-							<div class="card-item">
-								<div class="image">
-									<a href="#">
-										<img src="img/product-card-items/1.jpg" alt="">
-									</a>
-								</div>
-								<div class="description">
-									<a href="#">
-										Клей для облицовки балконов и полов с подогревом Полимин П-24 (25кг)
-									</a>
-								</div>									
-								<div class="share">
-									40%
-								</div>
-								<div class="bottom-part">
-									<div class="price">
-										<span class="old-price">
-											279.00 грн
-										</span>
-										<span class="new-price">
-											259.00 грн
-										</span>
-									</div>
-									<div class="wholesale">
-										<span>
-											Оптовая цена: 232 грн.
-										</span>
-									</div>
-									<div class="add-to-card">
-										<span class="minus">-</span>
-										<input type="text" name="count" value="1">
-										<span class="plus">+</span>
-									</div>
-									<div class="button-container">
-										<button class="buy">Купить</button>
-									</div>
-								</div>
-							</div>
-							<!-- End product card -->
-						</div>
-						<div class="col-3">
-							<!-- Product card -->
-							<div class="card-item">
-								<div class="image">
-									<a href="#">
-										<img src="img/product-card-items/2.jpg" alt="">
-									</a>
-								</div>
-								<div class="description">
-									<a href="#">
-										Клей для облицовки балконов и полов с подогревом Полимин П-24 (25кг)
-									</a>
-								</div>									
-								<div class="share">
-									40%
-								</div>
-								<div class="bottom-part">
-									<div class="price">
-										<span class="old-price">
-											279.00 грн
-										</span>
-										<span class="new-price">
-											259.00 грн
-										</span>
-									</div>
-									<div class="wholesale">
-										<span>
-											Оптовая цена: 232 грн.
-										</span>
-									</div>
-									<div class="add-to-card">
-										<span class="minus">-</span>
-										<input type="text" name="count" value="1">
-										<span class="plus">+</span>
-									</div>
-									<div class="button-container">
-										<button class="buy">Купить</button>
-									</div>
-								</div>
-							</div>
-							<!-- End product card -->
-						</div>
-						<div class="col-3">
-							<!-- Product card -->
-							<div class="card-item">
-								<div class="image">
-									<a href="#">
-										<img src="img/product-card-items/3.jpg" alt="">
-									</a>
-								</div>
-								<div class="description">
-									<a href="#">
-										Клей для облицовки балконов и полов с подогревом Полимин П-24 (25кг)
-									</a>
-								</div>									
-								<div class="share">
-									40%
-								</div>
-								<div class="bottom-part">
-									<div class="price">
-										<span class="old-price">
-											279.00 грн
-										</span>
-										<span class="new-price">
-											259.00 грн
-										</span>
-									</div>
-									<div class="wholesale">
-										<span>
-											Оптовая цена: 232 грн.
-										</span>
-									</div>
-									<div class="add-to-card">
-										<span class="minus">-</span>
-										<input type="text" name="count" value="1">
-										<span class="plus">+</span>
-									</div>
-									<div class="button-container">
-										<button class="buy">Купить</button>
-									</div>
-								</div>
-							</div>
-							<!-- End product card -->
-						</div>						
-						<div class="col-3">
-							<!-- Product card -->
-							<div class="card-item">
-								<div class="image">
-									<a href="#">
-										<img src="img/product-card-items/4.jpg" alt="">
-									</a>
-								</div>
-								<div class="description">
-									<a href="#">
-										Клей для облицовки балконов и полов с подогревом Полимин П-24 (25кг)
-									</a>
-								</div>									
-								<div class="share">
-									40%
-								</div>
-								<div class="bottom-part">
-									<div class="price">
-										<span class="old-price">
-											279.00 грн
-										</span>
-										<span class="new-price">
-											259.00 грн
-										</span>
-									</div>
-									<div class="wholesale">
-										<span>
-											Оптовая цена: 232 грн.
-										</span>
-									</div>
-									<div class="add-to-card">
-										<span class="minus">-</span>
-										<input type="text" name="count" value="1">
-										<span class="plus">+</span>
-									</div>
-									<div class="button-container">
-										<button class="buy">Купить</button>
-									</div>
-								</div>
-							</div>
-							<!-- End product card -->
-						</div>
-					</div>		
-			</div>
-		</div>
-		
-		<!-- Pagination -->
-		<div class="pagination">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-6">
-						<ul class="pagination-arrows">
-							<li class="active">
-								1
-							</li>
-							<li>
-								2
-							</li>
-						</ul>
-						<ul class="arrows-pagination">
-							<li class="prev">
-								<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-							</li>
-							<li class="next">
-								<img src="img/icons/arrow-pointing-to-right.svg" alt="">
-							</li>
-						</ul>
-					</div>
-					<div class="col-6 d-flex justify-content-end align-items-center">
-						<span class="pages-count">
-							Показаны с 1 по 12 из 13 (2 страницы)
-						</span>
 					</div>
 				</div>
 			</div>
+			<div class="row mt-4">
+				<div class="col d-flex justify-content-between">
+					<a href="" class="continue-shopping">Продолжить покупки</a>
+					<a href="" class="checkout">Оформить заказ</a>
+				</div>
+			</div>
 		</div>
-		<!-- Pagination -->
-		
-		
 	</section>
 	
-	<!-- End catalog section -->
 	
 	<footer class="footer">
 		<div class="footer__top">

@@ -30,17 +30,13 @@ $(function() {
 	
 	// counter for products
 	
-	var $plus = $('.product__slider .card-item .bottom-part .add-to-card .plus');
-	
-	console.log($plus);
-	
-	$('.product__slider .card-item .bottom-part .add-to-card .plus').on('click', function(e) {
+	$('.product__slider .card-item .bottom-part .add-to-card .plus, .catalog .sort-products .card-item .bottom-part .add-to-card .plus').on('click', function(e) {
 		var $input = $(this).siblings('input'),
 			$inputVal = $input.attr('value');
 		$input.attr('value', parseInt($inputVal) + 1);
 	});
 	
-	$('.product__slider .card-item .bottom-part .add-to-card .minus').on('click', function(e) {
+	$('.product__slider .card-item .bottom-part .add-to-card .minus, .catalog .sort-products .card-item .bottom-part .add-to-card .minus').on('click', function(e) {
 		var $input = $(this).siblings('input'),
 			$inputVal = $input.attr('value');
 		if($inputVal < 1) {
@@ -48,7 +44,22 @@ $(function() {
 		} else {
 			$input.attr('value', parseInt($inputVal) - 1);
 		}
-		
+	});
+	
+	$('.pannier .table tbody td.count .adding-counter .plus').click(function() {
+		var $input = $(this).siblings('input'),
+			$inputVal = $input.attr('value');
+		$input.attr('value', parseInt($inputVal) + 1);
+	});
+	
+	$('.pannier .table tbody td.count .adding-counter .minus').click(function() {
+		var $input = $(this).siblings('input'),
+			$inputVal = $input.attr('value');
+		if($inputVal < 1) {
+			$input.attr('value', parseInt(0));
+		} else {
+			$input.attr('value', parseInt($inputVal) - 1);
+		}
 	});
 	
 	
@@ -59,6 +70,44 @@ $(function() {
 		$(this).find('.search-category').slideToggle();
 	});
 	
+	// dropdown order select
+	
+	var $orderSelect = $('.catalog .sort-container .order-select');
+	$orderSelect.click(function() {
+		var $dropdown = $(this).find('.order-dropdown');
+		$dropdown.width($(this).outerWidth() - 7 + "px");
+		$dropdown.slideToggle();
+	});
+	
+	// dropdown digit select
+	var $digitSelect = $('.catalog .sort-container .digit-select');
+	$digitSelect.click(function() {
+		var $dropdown = $(this).find('.digit-dropdown');
+		$dropdown.width($(this).outerWidth() - 7 + "px");
+		$dropdown.slideToggle();
+	});
+	
+	
+	// delete row on basket
+	
+	var $delBtn = $('.pannier .table tbody td.count .delete-card');
+	$delBtn.click(function() {
+		$(this).closest('tr').remove();
+	});
+	
+	
+	// coupon accordion's
+	
+	var $couponBtn = $('.pannier .chance-accordion.coupon span');
+	var $sertificatBtn = $('.pannier .chance-accordion.sertificat span');
+	var $accordionCoupon = $('.pannier .accordion-form.coupon');
+	var $accordionSertificat = $('.pannier .accordion-form.sertificat');
+	$couponBtn.click(function() {
+		$accordionCoupon.slideToggle();
+	});
+	$sertificatBtn.click(function() {
+		$accordionSertificat.slideToggle();
+	});
 	
 	// hover main menu
 	

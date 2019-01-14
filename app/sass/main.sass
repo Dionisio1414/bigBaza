@@ -570,10 +570,10 @@ nav.breadcrumb
 		list-style-type: none
 		display: flex
 		justify-content: center
-		margin: 20px 0 60px 0
+		margin: 20px 0 80px 0
 		li
 			display: inline-block
-			border: 1px solid #E2E2E2
+			border: 2px solid #E2E2E2
 			border-radius: 2px
 			padding: 10px 12px 10px 15px
 			transition: all .35s ease-in-out
@@ -583,12 +583,437 @@ nav.breadcrumb
 				margin-right: 10px
 				img
 					transform: rotateY(-180deg)
-
-/*
+			&:hover
+				border-color: $accent
+	
+	.sort-container
+		border: 2px solid #e2e2e2
+		padding: 12px 5px
+		margin-bottom: 35px
+		.filter-btn
+			display: inline-block
+			font-family: "SegoeBold", sans-serif
+			font-size: 12px
+			text-transform: uppercase
+			letter-spacing: .5px
+			border: 1px solid #e2e2e2
+			padding: 7px 15px
+			color: #131313
+			cursor: pointer
+			img
+				width: 9px
+				transform: rotate(90deg)
+				vertical-align: inherit
+				margin-left: 10px
+		.list-type,
+		.grid-type
+			display: table
+			height: 20px
+			cursor: pointer
+			img
+				width: 25px
+		.list-type
+			margin-right: 20px
+		.list-type.active,
+		.grid-type.active
+			border: 1px solid #e2e2e2
+			padding: 3px 7px
+			img
+				vertical-align: middle
+				margin-bottom: 3px
+				width: 20px
+		.caption-sort
+			font-family: "SegoeRegulr", sans-serif
+			font-size: 12px
+			text-transform: uppercase
+			color: #000
+			margin-right: 15px
+			margin-bottom: 0
+		.order-select
+			font-family: "SegoeSemiLight", sans-serif
+			font-size: 12px
+			border: 1px solid #e2e2e2
+			padding: 5px 7px 5px 7px
+			border-radius: 2px
+			color: #000
+			margin-right: 20px
+			cursor: pointer
+			position: relative
+			img
+				width: 9px
+				transform: rotate(90deg)
+				margin-left: 30px
+				vertical-align: unset
+			ul.order-dropdown
+				display: none
+				padding: 0
+				margin: 0
+				list-style-type: none
+				position: absolute
+				left: -1px
+				top: 30px
+				background-color: #fff
+				z-index: 5
+				padding: 10px 0 15px 5px
+				border: 1px solid #e2e2e2
+				border-top: none
+				li
+					margin-bottom: 10px
+					a
+						font-family: "SegoeSemiLight", sans-serif
+						font-size: 12px
+						color: #000
+						&:hover
+							color: $accent
+					&:last-child
+						margin-bottom: 0
+						
+		.digit-select
+			font-family: "SegoeSemiLight", sans-serif
+			font-size: 13px
+			border: 1px solid #e2e2e2
+			border-radius: 2px 
+			padding: 2px 7px 5px 7px
+			color: #000
+			cursor: pointer
+			position: relative
+			img
+				width: 9px
+				transform: rotate(90deg)
+				margin-left: 15px
+				vertical-align: unset
+			ul.digit-dropdown
+				display: none
+				padding: 0
+				margin: 0
+				list-style-type: none
+				position: absolute
+				left: -1px
+				top: 30px
+				background-color: #fff
+				z-index: 5
+				padding: 10px 0 4px 5px
+				border: 1px solid #e2e2e2
+				border-top: none
+				li
+					margin-bottom: 10px
+					a
+						font-family: "SegoeSemiLight", sans-serif
+						font-size: 12px
+						color: #000
+						&:hover
+							color: $accent
+	.sort-products
+		.card-item
+			+product-card
+	
+	.pagination
+		border: 2px solid #e2e2e2
+		padding: 12px 5px
+		margin-top: 0
+		.pagination-arrows
+			display: inline-block
+			padding: 0
+			margin: 0
+			list-style-type: none
+			li
+				display: inline-block
+				font-family: "SegoeSemiBold", sans-serif
+				font-size: 15px
+				border: 2px solid #e2e2e2
+				border-radius: 2px
+				padding: 7px 17px 7px 17px
+				color: #000
+				transition: all .35s ease-in-out
+				&.active
+					background-color: #333
+					border-color: #333
+					color: #fff
+				&:hover
+					background-color: #333
+					border-color: #333
+					color: #fff
+					cursor: pointer
+		.pages-count
+			font-size: 14px
+		.arrows-pagination
+			display: inline-block
+			padding: 0
+			margin: 0
+			list-style-type: none
+			li
+				display: inline-block
+				border: 2px solid #e2e2e2
+				padding: 6px 12px 6px 12px
+				transition: all .35s ease-in-out
+				&.prev
+					transform: rotateY(-180deg)
+				img
+					width: 15px
+					margin-bottom: 4px
+				&:hover
+					border-color: $accent
+				
+/*	
 /*
 /* END CATALOG PAGE
 /* 
 /*
+
+
+/*	
+/*
+/* BASKET PAGE
+/* 
+/*
+
+
+.pannier
+	margin: 0 210px
+	margin-bottom: 100px
+	.table
+		margin-bottom: 35px
+		thead
+			th
+				font-family: "SegoeBold", sans-serif
+				font-size: 14px
+				border: 1px solid #e2e2e2
+				border-right-color: rgba(#E2E2E2, .5)
+				&:last-child
+					border-right-color: rgba(#E2E2E2, 1)
+				&:first-child
+					text-align: center
+				&.name
+					width: 25%
+					padding-left: 30px
+				&.price,
+				&.general-price
+					padding-left: 30px
+					padding-right: 30px
+				&.count
+					padding-left: 30px
+		tbody
+			td
+				border: 1px solid #e2e2e2
+				color: #282828
+				&.image
+					img
+						width: 77px
+						height: 78px
+						margin: 10px auto
+						display: block
+						max-width: 100%
+				&.desc
+					font-size: 14px
+					width: 220px
+					vertical-align: middle
+					padding: 20px 30px	
+				&.price,
+				&.general-price
+					font-family: "SegoeSemiBold", sans-serif
+					font-size: 16px
+					vertical-align: middle
+					padding: 10px 30px
+				&.count
+					padding-left: 30px
+					padding-right: 30px
+					.adding-counter
+						display: inline-block
+						float: left
+						margin-top: 30px
+						.minus,
+						.plus
+							float: left
+							display: inline-block
+							font-family: "SegoeBold", sans-serif
+							font-size: 12px
+							border: 1px solid #e2e2e2
+							padding: 8px 5px
+							cursor: pointer
+							vertical-align: middle
+						input
+							float: left
+							font-family: "SegoeBold", sans-serif
+							font-size: 12px
+							border: 1px solid #e2e2e2
+							width: 35px
+							height: 35px
+							text-align: center	
+					.delete-card
+						float: right
+						border: 2px	solid $accent
+						border-radius: 50%
+						padding: 5px
+						width: 25px
+						height: 25px
+						text-align: center
+						margin-top: 35px
+						cursor: pointer
+					img
+						width: 10px
+						height: 10px
+						margin-bottom: 14px
+	.chance-caption
+		font-family: "SegoeBold", sans-serif
+		font-size: 18px	
+		color: #010101
+	.chance-description
+		font-size: 14px
+		width: 57%
+		color: #5e5e5e
+		margin-bottom: 15px
+	.chance-accordion
+		background-color: #FAFAFA
+		border: 1px solid #DEDEDE
+		padding: 8px 20px
+		margin-bottom: 15px
+		span
+			font-family: "SegoeBold", sans-serif
+			font-size: 14px
+			text-transform: uppercase
+			color: #323131
+			cursor: pointer
+			img
+				width: 6px
+				transform: rotate(90deg)
+				margin-left: 20px
+	.accordion-form
+		display: none
+		border: 1px solid #e2e2e2
+		padding: 30px
+		margin-top: -15px
+		label
+			font-family: "SegoeRegular", sans-serif
+			font-size: 14px
+			margin-right: 10px
+			span
+				margin-right: 5px
+				color: $accent
+		input
+			display: inline-block
+			border: 1px solid #969696
+			border-radius: 2px
+			padding: 5px 15px
+			width: 72%
+			margin-right: 10px
+		button
+			font-family: "SegoeBold", sans-serif
+			font-size: 12px 
+			text-transform: uppercase
+			letter-spacing: .5px
+			background-color: transparent
+			border: 2px solid #e2e2e2
+			border-radius: 2px
+			padding: 8px 30px
+			vertical-align: top
+			color: #131313
+			transition: all .35s ease-in-out
+			&:hover
+				border-color: $accent
+	.prices-container
+		border: 1px solid #969696
+		border-radius: 2px
+		padding: 8px 0px
+		width: 370px
+		float: right
+		margin-top: 30px
+		.price-text
+			display: block
+			font-family: "SegoeSemiBold", sans-serif
+			font-size: 14px
+			margin-left: 25px
+			padding-bottom: 10px
+			&.all
+				padding-bottom: 0
+		.price
+			display: block
+			font-family: "SegoeBlack", sans-serif
+			font-size: 16px
+		.row
+			margin: 0 auto
+			&:first-child
+				margin-bottom: 10px
+				border-bottom: 1px solid #969696 
+	.continue-shopping,
+	.checkout
+		font-family: "SegoeBold", sans-serif
+		font-size: 12px
+		text-transform: uppercase
+		color: #131313
+		letter-spacing: .5px
+		border: 2px solid $accent
+		padding: 6px 27px
+		border-radius: 2px
+		
+	
+	
+/*	
+/*
+/* END BASKET PAGE
+/* 
+/*
+
+
+/*	
+/*
+/* CHECKOUT BASKET PAGE
+/* 
+/*
+
+
+.checkout-basket
+	margin: 0 210px
+	.checkout-form
+		border: 1px solid #DEDEDE
+		h4
+			font-family: "SegoeBold", sans-serif
+			font-size: 14px
+			text-transform: uppercase
+			background-color: #FAFAFA
+			padding: 10px 25px
+			border-bottom: 1px solid #DEDEDE
+		&.role-section
+			input
+				position: absolute
+				z-index: -1
+				opacity: 0
+				margin: 10px 0 0 20px
+			input + label
+				position: relative
+				padding: 0 0 0 60px
+				cursor: pointer
+			input + label:before
+				content: ''
+				position: absolute
+				top: -4px
+				left: 0
+				width: 50px
+				height: 26px
+				border-radius: 13px
+				background-color: #CDD1DA
+				box-shadow: inset 0 2px 3px rgba(0,0,0,.2)
+				transition: all .2s ease
+			input + label:after
+				content: ''
+				position: absolute
+				top: -2px
+				left: 2px
+				width: 22px
+				height: 22px
+				border-right: 10px
+				background: #fff
+				box-shadow: 0 2px 5px rgba(0,0,0,.3)
+				transition: all .2s ease
+		
+		
+
+
+/*	
+/*
+/* END CHECKOUT BASKET PAGE
+/* 
+/*
+
 
 /* FOOTER */
 
