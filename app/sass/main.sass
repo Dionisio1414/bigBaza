@@ -963,51 +963,330 @@ nav.breadcrumb
 
 .checkout-basket
 	margin: 0 210px
+	margin-bottom: 50px
 	.checkout-form
 		border: 1px solid #DEDEDE
+		margin-bottom: 30px
+		width: 90%
+		border-radius: 2px
 		h4
 			font-family: "SegoeBold", sans-serif
 			font-size: 14px
 			text-transform: uppercase
 			background-color: #FAFAFA
-			padding: 10px 25px
+			padding: 13px 25px
+			border-radius: 2px
 			border-bottom: 1px solid #DEDEDE
-		&.role-section
+		form
+			padding: 15px 25px 15px 25px
 			input
-				position: absolute
-				z-index: -1
-				opacity: 0
-				margin: 10px 0 0 20px
-			input + label
+				font-family: "SegoeRegular", sans-serif
+				font-size: 13px
+				background-color: #fafafa
+				border: 1px solid #969696
+				border-radius: 2px
+				padding: 7px 5px 7px 15px
+				width: 100%
+				color: #000
+				&::placeholder
+					font-family: "SegoeRegular", sans-serif
+					font-size: 13px
+					color: #000
+			.form-row
+				margin-bottom: 1rem
+		&.role-section,
+		&.delivery,
+		&.payment-method,
+			form
+				input
+					position: absolute
+					z-index: -1
+					opacity: 0
+					margin: 10px 0 0 20px
+				input + label
+					font-family: "SegoeSemiBold", sans-serif
+					font-size: 14px
+					margin-right: 25px
+					cursor: pointer
+					a
+						display: inline-block
+						font-family: "SrgoeSemiBold", sans-serif
+						font-size: 14px
+						text-decoration: underline
+						color: $accent
+				input + label::before
+					content: ''
+					display: inline-block
+					width: 20px
+					height: 20px
+					border-radius: 2px
+					background-color: transparent
+					background-image: url(../img/icons/check-mark-black-outline.svg)
+					background-repeat: no-repeat
+					background-size: 10px 10px
+					background-position: -6px -6px
+					border: 2px solid #e2e2e2
+					vertical-align: top
+					margin-right: 10px
+				input:checked + label::before
+					background-position: center center
+		&.payment-method
+			width: 100%
+		&.adress-driver
+			.custom-select-city
 				position: relative
-				padding: 0 0 0 60px
-				cursor: pointer
-			input + label:before
-				content: ''
-				position: absolute
-				top: -4px
-				left: 0
-				width: 50px
-				height: 26px
-				border-radius: 13px
-				background-color: #CDD1DA
-				box-shadow: inset 0 2px 3px rgba(0,0,0,.2)
-				transition: all .2s ease
-			input + label:after
-				content: ''
-				position: absolute
-				top: -2px
-				left: 2px
-				width: 22px
-				height: 22px
-				border-right: 10px
-				background: #fff
-				box-shadow: 0 2px 5px rgba(0,0,0,.3)
-				transition: all .2s ease
+				input
+					pointer-events: none
+				ul
+					display: none
+					padding: 0
+					margin: 0
+					list-style-type: none
+					background-color: #fff
+					position: absolute
+					z-index: 5
+					border-radius: 2px
+					padding: 5px 0 0 0
+					border: 1px solid #e2e2e2
+					width: 50%
+					li
+						padding-left: 10px
+						margin-bottom: 10px
+						a
+							font-family: "SegoeSemiLight", sans-serif
+							font-size: 13px 
+							color: #000
+							text-decoration: none
+						&:last-child
+							background-color: #fafafa
+							padding-top: 10px
+							padding-bottom: 10px
+							margin-bottom: 0
+							border-top: 1px solid #e2e2e2
+			.custom-select-country
+				position: relative
+				&::after
+					content: "▲"
+					position: absolute
+					right: 14px
+					top: 12px
+					font-size: 8px
+					color: #000
+				&.show::after
+					content: "▼"
+				input
+					pointer-events: none
+				ul
+					display: none
+					position: absolute
+					z-index: 5
+					background-color: #fff
+					padding: 0
+					margin: 0
+					list-style-type: none
+					width: 100%
+					border-radius: 2px
+					border: 1px solid #e2e2e2
+					padding: 5px 0px 5px 10px
+					line-height: 18px
+					height: 170px
+					//overflow: scroll
+					.mCSB_scrollTools 
+						.mCSB_draggerRail
+							background-color: transparent
+							border: 1px solid #e2e2e2
+							width: 5px
+						.mCSB_dragger 
+							.mCSB_dragger_bar
+								background-color: #CFCFCF
+								width: 7px
+								height: 15%
 		
-		
+					//&::-webkit-scrollbar
+						width: 7px
+					//&::-webkit-scrollbar-track
+						border-radius: 2px
+						background-color: transparent
+						border-left: 1px solid #e2e2e2
+					//&::-webkit-scrollbar-thumb
+						background-color: #CFCFCF
+						border-radius: 2px
+						height: 10px!important
+					li
+						a
+							font-family: "SegoeSemiLight", sans-serif
+							font-size: 12px 
+							color: #000
+							text-decoration: none
+		&.basket-container
+			width: 100%
+			h4
+				background-color: $accent
+				color: #fff
+			.products-container
+				padding: 20px 0 20px 24px
+				height: 263px
+				.mCSB_scrollTools 
+					.mCSB_draggerRail
+						background-color: transparent
+						border: 1px solid #e2e2e2
+						width: 5px
+					.mCSB_dragger 
+						.mCSB_dragger_bar
+							background-color: #CFCFCF
+							width: 7px
+							height: 15%
+				.row
+					position: relative
+					margin-bottom: 40px
+					&:after
+						content: ""
+						position: absolute
+						bottom: -20px
+						width: 100%
+						height: 1px
+						background-color: #F1F1F1
+					&:last-child
+						margin-bottom: 30px
+				img
+					width: 85px
+					height: 80px
+					margin-left: 13px
+				.desc
+					font-size: 12px
+					margin-left: 25px
+					line-height: 17px
+					color: #282828
+				.price
+					font-family: "SegoeSemiBold", sans-serif
+					font-size: 16px	
+					color: #282828
+				.adding-counter
+					display: inline-block
+					float: left
+					margin-left: 20px
+					margin-top: 20px
+					.minus,
+					.plus
+						float: left
+						font-family: "SegoeBold", sans-serif
+						font-size: 12px
+						border: 1px solid #e2e2e2
+						padding: 7px 5px
+						cursor: pointer
+					input
+						float: left
+						font-family: "Segoe", sans-serif
+						font-size: 12px
+						text-align: center
+						border: 1px solid #e2e2e2
+						width: 35px
+						height: 35px
+				.delete-card
+					float: right
+					border: 2px solid $accent
+					border-radius: 50%
+					padding: 5px
+					width: 25px
+					height: 26px
+					text-align: center
+					cursor: pointer
+					margin-top: 25px
+					margin-right: 20px
+					img
+						width: 10px
+						height: 10px
+						margin-bottom: 17px
+						margin-left: 0
+			.prices-container
+				width: 91%
+				border-radius: 2px
+				padding: 8px 0
+				border: 1px solid #969696
+				margin: 0 auto
+				margin-bottom: 30px
+				.price-text
+					display: block
+					font-family: "SegoeSemiBold", sans-serif
+					margin-left: 25px
+					padding-bottom: 10px
+				.all
+					padding-bottom: 0
+				.price
+					display: block
+					font-family: "SegoeBlack", sans-serif
+					font-size: 16px
+					text-align: right
+					margin-right: 25px
+				.row
+					margin: 0 auto
+					margin-bottom: 10px
+					border-bottom: 1px solid #969696
+					&:last-child
+						margin-bottom: 0
+						border-bottom: none
+		&.comment
+			width: 100%
+			border: none
+			h4
+				border-top: 1px solid #e2e2e2
+				border-left: 1px solid #e2e2e2
+				border-right: 1px solid #e2e2e2
+			form
+				padding: 0
+				textarea
+					resize: none
+					width: 100%
+					border: 1px solid #e2e2e2
+					border-top: none
+					padding: 15px 0 0 15px
+				input
+					position: absolute
+					z-index: -1
+					opacity: 0
+					margin: 10px 0 0 20px
+				input + label
+					font-family: "SegoeSemiBold", sans-serif
+					font-size: 14px
+					margin-right: 25px
+					cursor: pointer
+					a
+						display: inline-block
+						font-family: "SrgoeSemiBold", sans-serif
+						font-size: 14px
+						text-decoration: underline
+						color: $accent
+				input + label::before
+					content: ''
+					display: inline-block
+					width: 20px
+					height: 20px
+					border-radius: 2px
+					background-color: transparent
+					background-image: url(../img/icons/check-mark-black-outline.svg)
+					background-repeat: no-repeat
+					background-size: 10px 10px
+					background-position: -6px -6px
+					border: 2px solid #e2e2e2
+					vertical-align: top
+					margin-right: 10px
+				input:checked + label::before
+					background-position: center center
+				button
+					display: block
+					font-family: "SegoeBold", sans-serif
+					font-size: 12px
+					text-transform: uppercase
+					background-color: transparent
+					border: 2px solid $accent
+					padding: 7px 30px
+					letter-spacing: 1px
+					margin-top: 20px
+					
+			h4
+				margin-bottom: 0
 
-
+	
 /*	
 /*
 /* END CHECKOUT BASKET PAGE

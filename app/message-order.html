@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>Checkout</title>
+	<title>Basket</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -345,285 +345,23 @@
 				</a>
 			</li>
 			<li class="breadcrumb-item">
-				<a href="#">Корзина</a>
-				<img src="img/icons/breadcrumb-arrow.svg" class="breadcrumb-arrow" alt="">
-			</li>		
+				<a href="#">Оформление заказа
+					<img src="img/icons/breadcrumb-arrow.svg" class="breadcrumb-arrow" alt="">
+				</a>
+			</li>			
 			<li class="breadcrumb-item">
-				<a href="#">Оформление заказа</a>
+				<a href="#">Заказ оформлен</a>
 			</li>
 	 	</ol>
 	 	<h3 class="breadcrumb-caption">
-	 		Оформление заказа
+	 		Заказ оформлен 
 	 	</h3>
 	</nav>
 	<!-- End breadcrumbs -->
 	
-	
-	<section class="checkout-basket">
-		<div class="container-fluid p-0">
-			<div class="row">
-				<div class="col-6 p-0">
-					<div class="checkout-form role-section">
-						<h4>Создать учетную запись или войти в систему</h4>
-						<form>
-							<input type="checkbox" name="reg" id="reg" />
-							<label for="reg">Регистрация</label>
-							<input type="checkbox" name="client" id="client" />
-							<label for="client">Постоянный клиент</label>
-						</form>
-					</div>					
-					<div class="checkout-form personal-data">
-						<h4>Персональные данные</h4>
-						<form>
-							<div class="form-row">
-								<div class="col">
-									<input type="text" name="username" placeholder="Имя*">
-								</div>
-								<div class="col">
-									<input type="text" name="surname" placeholder="Фамилия*">
-								</div>
-							</div>
-							<div class="form-group">
-								<input type="email" name="email" placeholder="Email*">
-							</div>
-							<div class="form-group">
-								<input type="tel" name="telephone" placeholder="Телефон*">
-							</div>
-						</form>
-					</div>					
-					<div class="checkout-form user-password">
-						<h4>Ваш пароль</h4>
-						<form>
-							<div class="form-group">
-								<input type="password" name="password" placeholder="Пароль*">
-							</div>
-							<div class="form-group">
-								<input type="password" name="repeatPassword" placeholder="Подтвердите пароль*">
-							</div>
-						</form>
-					</div>					
-					<div class="checkout-form delivery">
-						<h4>Способ доставки</h4>
-						<form>
-							<input type="checkbox" name="del" id="del" />
-							<label for="del">Доставка</label>
-							<input type="checkbox" name="driver" id="driver" />
-							<label for="driver">Самовывоз</label>
-						</form>
-					</div>					
-					<div class="checkout-form adress-driver">
-						<h4>Адрес доставки</h4>
-						<form>
-							<div class="form-group">
-								<div class="custom-select-country">
-									<input type="text" class="select-country" name="country" align="left" value="Регион">
-									<ul>
-										<li>
-											<a href="#">
-												---Выберите---
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												Винница 
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												Днепропетровск
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												Донецк
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												Кировоград
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												Ровно
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												Полтава
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												Запорожье
-											</a>
-										</li>		
-										<li>
-											<a href="#">
-												Харьков
-											</a>
-										</li>		
-										<li>
-											<a href="#">
-												Киев
-											</a>
-										</li>
-									</ul>
-								</div>									
-							</div>
-							<div class="form-group">
-								<div class="custom-select-city">
-									<input type="text" name="city" placeholder="Город*">
-									<ul>
-										<li>
-											<a href="#">
-												Харьков
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												Киев
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												Управление...
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="form-group">
-								<input type="text" name="street" placeholder="Улица*">
-							</div>
-							<div class="form-row">
-								<div class="col">
-									<input type="text" name="house" placeholder="Дом*">
-								</div>
-								<div class="col">
-									<input type="text" name="room" placeholder="Квартира">
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="col-6 p-0">
-					<div class="checkout-form payment-method">
-						<h4>Способ оплаты</h4>
-						<form>
-							<input type="checkbox" name="buy" id="buy" />
-							<label for="buy">Оплата картой через Приват 24 (или другой онлайн банк) <a href="#">
-								Инструкция
-							</a>
-							</label>
-							<input type="checkbox" name="buy-driver" id="buy-driver" />
-							<label for="buy-driver">Наличными водителю службы доставки</label>
-						</form>
-					</div>						
-					<div class="checkout-form basket-container">
-						<h4>Корзина</h4>
-						<div class="products-container">
-							<div class="row">
-								<div class="col-5 d-flex p-0">
-									<img src="img/photo-basket.png" alt="">
-									<p class="desc">Клей для облицовки балконов и полов с подогревом Полимин П-24 (25кг)</p>
-								</div>
-								<div class="col-4 p-0">
-									<div class="adding-counter">
-										<span class="minus">-</span>
-										<input type="text" name="count" value="1">
-										<span class="plus">+</span>
-									</div>
-									<div class="delete-card">
-										<img src="img/icons/cancel.svg" alt="">
-									</div>
-								</div>
-								<div class="col-3 p-0 d-flex align-items-center justify-content-center">
-									<p class="price">
-										259.00 грн
-									</p>
-								</div>
-							</div>								
-							<div class="row">
-								<div class="col-5 d-flex p-0">
-									<img src="img/photo-basket.png" alt="">
-									<p class="desc">Клей для облицовки балконов и полов с подогревом Полимин П-24 (25кг)</p>
-								</div>
-								<div class="col-4 p-0">
-									<div class="adding-counter">
-										<span class="minus">-</span>
-										<input type="text" name="count" value="1">
-										<span class="plus">+</span>
-									</div>
-									<div class="delete-card">
-										<img src="img/icons/cancel.svg" alt="">
-									</div>
-								</div>
-								<div class="col-3 p-0 d-flex align-items-center justify-content-center">
-									<p class="price">
-										259.00 грн
-									</p>
-								</div>
-							</div>							
-						</div>
-						<div class="prices-container">
-							<div class="row">
-								<div class="col-7">
-									<span class="price-text">
-										Цена:
-									</span>
-								</div>
-								<div class="col-5">
-									<span class="price">
-										259.00 грн
-									</span>
-								</div>
-							</div>							
-							<div class="row">
-								<div class="col-7">
-									<span class="price-text">
-										Промежуточный итог:
-									</span>
-								</div>
-								<div class="col-5">
-									<span class="price">
-										259.00 грн
-									</span>
-								</div>
-							</div>							
-							<div class="row">
-								<div class="col-7">
-									<span class="price-text all">
-										Всего:
-									</span>
-								</div>
-								<div class="col-5">
-									<span class="price">
-										259.00 грн
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>	
-					<div class="checkout-form comment">
-						<h4>Добавить комментарий к заказу</h4>
-						<form>
-							<textarea name="" id="" cols="30" rows="4"></textarea>
-							<input type="checkbox" name="share" id="share" />
-							<label for="share">
-								Я хочу подписаться на рассылку акций 
-							</label>
-							<button type="submit">
-								подтвердить заказ
-							</button>
-						</form>
-						<form>
-							
-						</form>
-					</div>		
-				</div>
-			</div>
-		</div>
+	<section class="message-order">
+		<h1>Ваш заказ успешно оформлен!</h1>
+		
 	</section>
 	
 	<footer class="footer">

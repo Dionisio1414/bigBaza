@@ -23,6 +23,7 @@
     "gulp-util": "^3.0.8"
   },
   "dependencies": {
-    "jquery-color": "^1.0.0"
+    "jquery-color": "^1.0.0",
+    "malihu-custom-scrollbar-plugin": "^3.1.5"
   }
 }

@@ -46,13 +46,13 @@ $(function() {
 		}
 	});
 	
-	$('.pannier .table tbody td.count .adding-counter .plus').click(function() {
+	$('.pannier .table tbody td.count .adding-counter .plus, .checkout-basket .checkout-form.basket-container .products-container .adding-counter .plus').click(function() {
 		var $input = $(this).siblings('input'),
 			$inputVal = $input.attr('value');
 		$input.attr('value', parseInt($inputVal) + 1);
 	});
 	
-	$('.pannier .table tbody td.count .adding-counter .minus').click(function() {
+	$('.pannier .table tbody td.count .adding-counter .minus, .checkout-basket .checkout-form.basket-container .products-container .adding-counter .minus').click(function() {
 		var $input = $(this).siblings('input'),
 			$inputVal = $input.attr('value');
 		if($inputVal < 1) {
@@ -96,6 +96,7 @@ $(function() {
 	});
 	
 	
+	
 	// coupon accordion's
 	
 	var $couponBtn = $('.pannier .chance-accordion.coupon span');
@@ -131,6 +132,47 @@ $(function() {
 		$(this).find('.more').animate({
 			opacity: 0
 		}, 500);
+	});
+	
+	
+	// CHECKOUT SELECT'S
+	
+	var $selectCountry = $('.checkout-basket .checkout-form.adress-driver .custom-select-country');
+	var $selectInput = $selectCountry.find('input');
+	var $selectOptions = $selectCountry.find('ul li a');
+	
+	$selectCountry.click(function() {
+		$(this).find('ul').slideToggle();
+		$(this).toggleClass('show');
+	});
+	
+	$selectOptions.click(function(e) {
+		e.preventDefault();
+		var $valOption = $(this).html();
+		$selectInput.attr('value', $valOption);
+	});
+
+	
+	
+	/* Custom scrollbar for select's */
+	
+	$('.checkout-basket .checkout-form.adress-driver .custom-select-country ul').mCustomScrollbar({
+		 axios: "y"
+	});
+	
+	/* Custom scrollbar for basket container */
+	$('.checkout-basket .checkout-form.basket-container .products-container').mCustomScrollbar();
+	
+	
+	var $delRows = $('.checkout-basket .checkout-form.basket-container .products-container .delete-card');
+	$delRows.click(function() {
+		$(this).closest('.row').remove();
+	});
+	
+	var $seltCity = $('.checkout-basket .checkout-form.adress-driver .custom-select-city');
+	console.log($seltCity);
+	$seltCity.click(function() {
+		$(this).find('ul').slideToggle();
 	});
 	
 });
