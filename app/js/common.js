@@ -10,10 +10,41 @@ $(function() {
 		prevArrow: $('.plumbing .caption-row .arrows-navigation li.prev, .catalog-arrows li.prev'),
 		nextArrow: $('.plumbing .caption-row .arrows-navigation li.next, .catalog-arrows li.next')
 	});
+	
+	$('.related-products-slider').slick({
+		prevArrow: $('.product-inner .caption-row .arrows-navigation li.prev'),
+		nextArrow: $('.product-inner .caption-row .arrows-navigation li.next')
+	});
+	
 	$('.ft-slider').slick({
 		slidesToShow: 5
 	});
 	
+	// Slider main product
+
+	$('.slider-for').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  arrows: false,
+	  fade: true,
+	  asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+	  asNavFor: '.slider-for',
+	  dots: true,
+	  focusOnSelect: true
+	});
+
+	
+	// gallery products
+	 
+//    $('.product-inner .slider-product.slick-initialized.slick-slider .slick-slide .container-image img .popup-link').magnificPopup({
+//		delegate: 'a', 
+//		type: 'image'
+//	});
+
 	
 	// tabs
 	
@@ -26,6 +57,13 @@ $(function() {
 		$sliders.removeClass('active').eq($(this).index()).addClass('active');
 		$('.product__slider').slick('setPosition');
 		$('.product__slider').slick();
+	});
+	
+	
+	var $productDescTabs = $(".product-inner .tabs a");
+	$productDescTabs.click(function(e) {
+		e.preventDefault();
+		$(this).addClass('active').siblings().removeClass('active');
 	});
 	
 	// counter for products
@@ -60,6 +98,22 @@ $(function() {
 		} else {
 			$input.attr('value', parseInt($inputVal) - 1);
 		}
+	});
+	
+	$('.product-inner .description-product .counter .adding-card .minus').click(function() {
+		var $input = $(this).siblings('input'),
+		$inputVal = $input.attr('value');
+		if($inputVal < 1) {
+			$input.attr('value', parseInt(0));
+		} else {
+			$input.attr('value', parseInt($inputVal) - 1);
+		}
+	});
+	
+	$('.product-inner .description-product .counter .adding-card .plus').click(function() {
+		var $input = $(this).siblings('input'),
+			$inputVal = $input.attr('value');
+		$input.attr('value', parseInt($inputVal) + 1);
 	});
 	
 	
