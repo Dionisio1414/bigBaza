@@ -60,10 +60,12 @@ $(function() {
 	});
 	
 	
-	var $productDescTabs = $(".product-inner .tabs a");
+	var $productDescTabs = $(".product-inner .tabs a"),
+		$productText = $('.product-inner .specification-product .wrapper');
 	$productDescTabs.click(function(e) {
 		e.preventDefault();
 		$(this).addClass('active').siblings().removeClass('active');
+		$productText.removeClass('initalization').eq($(this).index()).addClass('initalization');
 	});
 	
 	// counter for products
@@ -100,7 +102,7 @@ $(function() {
 		}
 	});
 	
-	$('.product-inner .description-product .counter .adding-card .minus').click(function() {
+	$('.product-inner .description-product .counter .adding-card .minus, .related-products-slider.slick-initialized.slick-slider .card-item .bottom-part .add-to-card .minus').click(function() {
 		var $input = $(this).siblings('input'),
 		$inputVal = $input.attr('value');
 		if($inputVal < 1) {
@@ -110,7 +112,7 @@ $(function() {
 		}
 	});
 	
-	$('.product-inner .description-product .counter .adding-card .plus').click(function() {
+	$('.product-inner .description-product .counter .adding-card .plus, .related-products-slider.slick-initialized.slick-slider .card-item .bottom-part .add-to-card .plus').click(function() {
 		var $input = $(this).siblings('input'),
 			$inputVal = $input.attr('value');
 		$input.attr('value', parseInt($inputVal) + 1);
@@ -229,6 +231,47 @@ $(function() {
 		$(this).find('ul').slideToggle();
 	});
 	
+	// Read more
+
+	var	$textContainer = $('.product-inner .specification-product .wrapper'),
+		$showMore = $('.product-inner .specification-product .show-more');
+	var $containerHeight = $textContainer.height(); // when text closed
+	var $defaultHeight = 100; 
+		
+	console.log("Height: " + $defaultHeight);
+	
+	$textContainer.css({
+		"max-height": $defaultHeight,
+		"overflow": "hidden"
+	});
+	
+	$showMore.on("click", function(e) {
+		e.preventDefault();
+		var $btn = $(this).find('span');
+		$(this).toggleClass('change');
+		var $newHeight = 0;
+		if($textContainer.hasClass('active')) {
+			$newHeight = 100;
+			$textContainer.removeClass('active');
+			$btn.text('Показать больше');
+		} else {
+			$newHeight = $containerHeight;
+			$textContainer.addClass('active');
+			$btn.text('Скрыть');
+		}
+		
+		$textContainer.animate({
+			"max-height" : $newHeight
+		}, 500);
+		
+		console.log($newHeight);
+	});
+	
 });
+
+/* Helper function's */
+	
+
+/* End helper function's */
 
 
