@@ -59,7 +59,6 @@ $(function() {
 		$('.product__slider').slick();
 	});
 	
-	
 	var $productDescTabs = $(".product-inner .tabs a"),
 		$productText = $('.product-inner .specification-product .wrapper');
 	$productDescTabs.click(function(e) {
@@ -67,6 +66,19 @@ $(function() {
 		$(this).addClass('active').siblings().removeClass('active');
 		$productText.removeClass('initalization').eq($(this).index()).addClass('initalization');
 	});
+	
+	
+	// tabs cabinet
+	
+	var $cabinetLi = $('.personal-cabinet .navigation-block .navigation li'),
+		$contentArea = $('.personal-cabinet .content-cabinet > div');
+	$cabinetLi.click(function(e) {
+		e.preventDefault();
+		$(this).addClass('active').siblings().removeClass('active');
+		$contentArea.removeClass('active').eq($(this).index()).addClass('active');
+	});
+	
+	
 	
 	// counter for products
 	
@@ -212,7 +224,7 @@ $(function() {
 	
 	/* Custom scrollbar for select's */
 	
-	$('.checkout-basket .checkout-form.adress-driver .custom-select-country ul').mCustomScrollbar({
+	$('.checkout-basket .checkout-form.adress-driver .custom-select-country ul, .personal-cabinet .adress-delivery .wrapper-second .custom-select-country ul').mCustomScrollbar({
 		 axios: "y"
 	});
 	
@@ -225,10 +237,16 @@ $(function() {
 		$(this).closest('.row').remove();
 	});
 	
-	var $seltCity = $('.checkout-basket .checkout-form.adress-driver .custom-select-city');
+	var $seltCity = $('.checkout-basket .checkout-form.adress-driver .custom-select-city, .personal-cabinet .adress-delivery .wrapper-second .custom-select-city');
 	console.log($seltCity);
 	$seltCity.click(function() {
 		$(this).find('ul').slideToggle();
+	});
+	
+	var $cabinetRegion = $('.personal-cabinet .adress-delivery .wrapper-second .custom-select-country');
+	$cabinetRegion.click(function() {
+		$(this).find('ul').slideToggle();
+		$(this).toggleClass('show');
 	});
 	
 	// Read more

@@ -1903,16 +1903,347 @@ nav.breadcrumb
 				font-size: 13px
 				padding-right: 50px
 	.adding-comment
+		margin-top: 30px
 		h2
 			font-family: "SegoeBold", sans-serif
 			font-size: 14px
 			text-transform: uppercase
 			margin-bottom: 20px
 			color: #000
-				
+		form
+			.row
+				margin: 0 auto
+				margin-bottom: 15px
+			label
+				font-family: "SegoeSemiBold", sans-serif
+				font-size: 13px
+				letter-spacing: 1px
+				color: #000
+				span
+					color: $accent 
+			input
+				font-size: 13px
+				border: 1px solid #969696
+				background-color: #fafafa
+				border-radius: 2px
+				padding: 3px 5px 5px 15px
+				width: 100%
+				color: #000
+				&::placeholder
+					font-size: 13px
+					color: #000
+			textarea
+				border: 1px solid #969696
+				background-color: #fafafa
+				border-radius: 2px
+				resize: none
+				padding: 3px 5px 5px 15px
+				width: 100%
+				&::placeholder
+					font-size: 13px
+					color: #000
+			button
+				background-color: transparent
+				font-family: "SegoeBold", sans-serif
+				font-size: 12px
+				text-transform: uppercase
+				letter-spacing: 1px
+				border: 2px solid $accent
+				border-radius: 2px
+				padding: 7px 50px
+				color: #131313
+				transition: all .35s ease
+				&:hover
+					background-color: $accent
+					color: #fff
+	
 /*	
 /*
 /* END NEWS PAGE
+/* 
+/*
+
+
+/*	
+/*
+/* PERSONAL CABINET PAGE
+/* 
+/*
+
+.personal-cabinet
+	margin: 0 200px
+	margin-bottom: 450px
+	.content-cabinet > div
+		display: none
+	.content-cabinet > div.active
+		display: block
+	.navigation-block
+		border: 1px solid #e2e2e2
+		border-radius: 2px
+		h4
+			background-color: #fafafa
+			font-family: "SegoeBold", sans-serif
+			font-size: 14px
+			text-transform: uppercase
+			border-bottom: 1px solid #e2e2e2
+			padding: 11px 0 11px 20px
+			margin-bottom: 0
+			color: #000
+		.navigation
+			padding: 0
+			margin: 0
+			margin: 15px 0
+			list-style-type: none
+			.row
+				margin: 0 auto
+			li
+				position: relative
+				display: block
+				margin-bottom: 12px
+				margin-left: 0
+				transition: all .5s ease
+				a
+					font-family: "SegoeRegular", sans-serif
+					font-size: 14px
+					text-transform: capitalize
+					color: #131313
+					span.arrow-right
+						position: absolute
+						right: 35px
+						svg
+							width: 8px
+				&:last-child
+					margin-bottom: 0
+				&::before
+					content: ""
+					position: absolute
+					top: 8px
+					left: -14%
+					width: 12px
+					height: 12px
+					background-color: #fff
+					border-radius: 50%
+					border: 2px solid #ececec 
+				&:hover a
+					font-family: "SegoeSemiBold", sans-serif
+					color: $accent
+				&:hover::before
+					border-color: $accent
+				&:hover .arrow-right svg
+					fill: $accent
+				&.active a
+					font-family: "SegoeSemiBold", sans-serif
+					color: $accent
+				&.active::before
+					border-color: $accent
+				&.active .arrow-right svg
+					fill: $accent
+			.timeline
+				position: relative
+				height: 100%
+				&::before
+					content: ""
+					position: absolute
+					left: 39%
+					width: 2px
+					height: 88%
+					background-color: #ececec
+					top: 9px
+	// tabs content
+	.my-account
+		p
+			font-family: "SegoeSemiBold", sans-serif
+			font-size: 14px
+			max-width: 75%
+			line-height: 18px
+			color: #000
+			a
+				text-decoration: underline
+				color: $accent
+	.edit-account,
+	.change-password,
+	.adress-delivery,
+	.story-orders,
+	.exit-account
+		h3
+			font-family: "SegoeBold", sans-serif
+			font-size: 14px
+			text-transform: uppercase
+			margin-bottom: 20px
+		form
+			width: 70%
+			label
+				font-family: "SegoeSemiBold", sans-serif
+				font-size: 13px
+				margin-right: 20px
+				white-space: nowrap
+				span
+					margin-right: 3px
+					color: $accent
+			input
+				font-size: 13px
+				border: 1px solid #969696
+				border-radius: 2px
+				background-color: #fafafa
+				padding: 5px 5px 6px 15px
+				width: 100%
+				&::placeholder
+					color: #000
+		button
+			background-color: transparent
+			border: 2px solid #e2e2e2
+			font-family: "SegoeBold", sans-serif
+			font-size: 12px
+			text-transform: uppercase
+			padding: 7px 30px
+			letter-spacing: 1px
+			border-radius: 2px
+			color: #131313
+			transition: all .35s ease
+			margin-top: 20px
+			&:hover
+				border-color: $accent
+			&:first-child
+				margin-right: 67.5%
+	.adress-delivery
+		p
+			font-size: 13px
+			color: #000
+		.wrapper-one
+			button
+				&:first-child
+					margin-right: 47%
+		.wrapper-second
+			display: none
+			.custom-select-country
+				position: relative
+				input
+					pointer-events: none
+				&::after
+					content: "▲"
+					position: absolute
+					right: 14px
+					top: 12px
+					font-size: 8px
+					color: #000
+				&.show::after
+					content: "▼"
+				ul
+					display: none
+					position: absolute
+					z-index: 5
+					background-color: #fff
+					padding: 0
+					margin: 0
+					list-style-type: none
+					border-radius: 2px
+					border: 1px solid #e2e2e2
+					padding: 5px 0px 5px 10px
+					line-height: 18px
+					height: 170px
+					width: 100%
+					li
+						a
+							font-family: "SegoeSemiLight", sans-serif
+							font-size: 12px
+							text-decoration: none
+							color: #000
+					.mCSB_scrollTools 
+						.mCSB_draggerRail
+							background-color: transparent
+							border: 1px solid #e2e2e2
+							width: 5px
+						.mCSB_dragger 
+							.mCSB_dragger_bar
+								background-color: #cfcfcf
+								width: 7px
+								height: 15%
+			.custom-select-city		
+				position: relative
+				input
+					pointer-events: none
+				ul
+					display: none
+					padding: 0
+					margin: 0
+					list-style-type: none
+					position: absolute
+					z-index: 5
+					background-color: #fff
+					border-radius: 2px
+					padding: 5px 0 0 0 
+					border: 1px solid #e2e2e2
+					width: 50%
+					li
+						padding-left: 10px
+						margin-bottom: 10px
+						&:last-child
+							background-color: #fafafa
+							padding-top: 10px
+							padding-bottom: 10px
+							margin-bottom: 0
+							border-top: 1px solid #e2e2e2
+						a
+							font-family: "SegoeSemiLight", sans-serif
+							font-size: 13px
+							text-decoration: none
+							color: #000		
+		.wrapper-third	
+			display: none
+			.buttons
+				margin: 0 auto
+			h4
+				font-family: "SegoeBold", sans-serif
+				font-size: 14px
+				text-transform: uppercase
+				background-color: #fafafa
+				padding: 13px 25px
+				padding: 13px 25px
+				border-radius: 2px
+				border: 1px solid #dedede
+				margin-bottom: 0
+				width: 74%
+			.desc
+				border: 1px solid #e2e2e2
+				border-top: none
+				padding: 20px
+				border-radius: 0 0 2px 2px
+				width: 74%
+				.user-info
+					padding: 0
+					margin: 0
+					list-style-type: none
+					li
+						font-size: 13px
+						margin-bottom: 5px
+				a.edit,
+				a.delete
+					display: block
+					font-family: "SegoeBold", sans-serif
+					font-size: 12px
+					text-transform: uppercase
+					border: 2px solid #e2e2e2
+					border-radius: 2px
+					padding: 7px 25px
+					width: 165px
+					color: #131313
+					transition: all .35s ease
+					&:hover
+						border-color: $accent
+				a.edit
+					margin-bottom: 10px
+					margin-top: 30px
+	.exit-account
+		p
+			font-size: 12px
+			max-width: 70%
+		button
+			&:first-child
+				margin-right: 30%
+	
+/*	
+/*
+/* END PERSONAL CABINET PAGE
 /* 
 /*
 
